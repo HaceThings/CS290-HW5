@@ -31,7 +31,7 @@ function PostRequestParameters(req){
   return nameValueArray;
 }
 
-app.post('/',function(req,res){
+app.post('/home',function(req,res){
   var post_req = {};
   post_req.post = 'POST Request Received';
   post_req.getParams = GetRequestParameters(req);
@@ -39,7 +39,7 @@ app.post('/',function(req,res){
   res.render('home', post_req);
 });
 
-app.get('/',function(req,res){
+app.get('/home',function(req,res){
   var get_req = {};
   get_req.get = 'GET Request Received';
   get_req.getParams = GetRequestParameters(req);
