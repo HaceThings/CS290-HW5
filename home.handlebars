@@ -1,36 +1,29 @@
-<!doctype html>
-<html>
-<head>
-	<title>GET and POST checker!</title>
-</head>
-<body>
-	<h1>{{{post}}}</h1>
-	<h1>{{{get}}}</h1>
-	<table id="get">
-		<tr>
-			<th>Name</th>
-			<th>Value</th>
-		</tr>
-		{{#each getParams}}
-			<tr>
-				<td>{{this.name}}</td>
-				<td>{{this.value}}</td>
-			</tr>
-		{{/each}}
-	</table>
-	{{#if post}}
-	<table id="post">
-		<tr>
-			<th>Name</th>
-			<th>Value</th>
-		</tr>
-		{{#each postParams}}
+<h1>{{{post}}}</h1>
+<h1>{{{get}}}</h1>
+<table id="get">
+	<tr>
+		<th>Name</th>
+		<th>Value</th>
+	</tr>
+	{{#each getParams}}
 		<tr>
 			<td>{{this.name}}</td>
 			<td>{{this.value}}</td>
 		</tr>
-		{{/each}}
-	</table>
-	{{/if}}
-</body>
-</html>
+	{{/each}}
+</table>
+{{#if post}}
+<table id="post">
+	<tr>
+		<th>Name</th>
+		<th>Value</th>
+	</tr>
+	{{#each postParams}}
+	<tr>
+		<td>{{this.name}}</td>
+		<td>{{this.value}}</td>
+	</tr>
+	{{/each}}
+</table>
+{{/if}}
+
